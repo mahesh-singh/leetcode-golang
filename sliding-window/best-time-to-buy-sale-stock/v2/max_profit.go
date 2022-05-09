@@ -32,7 +32,6 @@ func MaxProfit(prices []int) int {
 			maxProfit = price - min
 		}
 	}
-
 	return maxProfit
 
 }
