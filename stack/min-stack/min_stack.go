@@ -47,6 +47,7 @@ func Constructor() MinStack {
 
 func (m *MinStack) Push(i int) {
 	min := i
+	//at any given level, if current min is still the min, keep it on with new level as well, otherwise have a new min along with value in push
 	if len(m.stackItems) > 0 && m.GetMin() < i {
 		min = m.GetMin()
 	}
