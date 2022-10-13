@@ -24,14 +24,14 @@ type ListNode struct {
 }
 
 func reverseList(head *ListNode) *ListNode {
-	var prev *ListNode //previous node will be nil at start
+	var prev *ListNode //previous node. It will be nil at start
 	curr := head
 	for curr != nil {
 		//so that it will not lost when we move the direction
 		tempNode := curr.next
-		//curr's next will be previous node.
+		//curr's next will be previous node. tempNode holding its curruent value
 		curr.next = prev
-		// new previous for next iteration, at the end of iteration, it will become the head
+		// new previous for next iteration, at the end of the iteration, it will become the head
 		prev = curr
 		curr = tempNode // for next iteration
 	}
