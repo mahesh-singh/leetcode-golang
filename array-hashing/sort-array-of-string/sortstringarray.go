@@ -34,23 +34,6 @@ func sortStringArrayBruteForce(strs []string) string {
 	return strings.Join(strs, " ")
 }
 
-func sortStringArrayBruteForceImprved(strs []string) string {
-	if len(strs) == 0 {
-		return ""
-	}
-
-	for i := 0; i < len(strs); i++ {
-		j := i + 1
-		for j < len(strs) && len(strs[i]) > len(strs[j]) {
-			//swipe the value
-			strs[i], strs[j] = strs[j], strs[i]
-			j++
-		}
-	}
-
-	return strings.Join(strs, " ")
-}
-
 func sortStringArraycompare(strs []string) string {
 	if len(strs) == 0 {
 		return ""
