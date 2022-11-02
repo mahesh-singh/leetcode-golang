@@ -18,4 +18,9 @@ func TestSortArrayofString(t *testing.T) {
 	if strings.Compare(Expectedoutput, output) != 0 {
 		t.Errorf("Expected: %v, output: %v", Expectedoutput, output)
 	}
+
+	output = sortStringArraycompare(input)
+	if strings.Compare(Expectedoutput, output) != 0 {
+		t.Errorf("Expected: %v, output: %v", Expectedoutput, output)
+	}
 }

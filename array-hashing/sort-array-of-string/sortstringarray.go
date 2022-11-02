@@ -1,6 +1,9 @@
 package sortarrayofstring
 
-import "strings"
+import (
+	"sort"
+	"strings"
+)
 
 /*
 Sort an array of strings according to string lengths (geeksforgeeks.org/sort-array-strings-according-string-lengths/)
@@ -44,6 +47,18 @@ func sortStringArrayBruteForceImprved(strs []string) string {
 			j++
 		}
 	}
+
+	return strings.Join(strs, " ")
+}
+
+func sortStringArraycompare(strs []string) string {
+	if len(strs) == 0 {
+		return ""
+	}
+
+	sort.Slice(strs, func(i, j int) bool {
+		return len(strs[i]) < len(strs[j])
+	})
 
 	return strings.Join(strs, " ")
 }
