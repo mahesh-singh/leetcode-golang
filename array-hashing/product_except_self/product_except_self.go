@@ -3,8 +3,8 @@ package productexceptself
 func productExceptSelf(nums []int) []int {
 	n := len(nums)
 
-	var pre []int
-	var nxt []int
+	pre := make([]int, n)
+	nxt := make([]int, n)
 
 	pre[0] = 1
 	nxt[n-1] = 1
