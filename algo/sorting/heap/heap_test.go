@@ -19,4 +19,6 @@ func TestMinHeap(t *testing.T) {
 	if min != 2 {
 		t.Errorf("Expected: %d, got: %d", 2, min)
 	}
+
+	
 }
